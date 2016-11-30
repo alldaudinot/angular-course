@@ -1,0 +1,9 @@
+# Eclipse Core
+/**/.project
+target/
+.settings/
+build/
+.classpath
+
+# Tomcat
+Servers/
