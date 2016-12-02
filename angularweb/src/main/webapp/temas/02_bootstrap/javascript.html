@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<title>angular-course</title>	
+</head>
+<body id="app">
+	
+	<input type="text" ng-model="name" />
+	
+	<div>Hola {{name}}</div>
+	<div>Hola {{::name}}</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+	<script>
+		angular.bootstrap(document.getElementById("app"), []);
+	</script>
+</body>
+</html>
