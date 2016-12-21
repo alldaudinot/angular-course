@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<title>angular-course</title>
+	<link rel="stylesheet" href="../../assets/css/style.css"></link>
+</head>
+<body ng-app="myApp">
+	
+	<span>name1: </span>
+	<input type="text" name="name1" ng-model="model.name1" required/>
+	<span ng-show="myForm.name1.$error.required">nombre requerido</span>
+	<!-- angular.element(document.getElementById("name1")).data() -->
+	<br/>
+		
+	<span>No se activa porque no existe un formulario por encima (form padre)</span>		
+	
+	<br/>
+	<br/>
+	<br/>
+	
+	<form name="form">
+		<span>name2: </span>
+		<input type="text" name="name2" ng-model="model.name2" required/>
+		<span ng-show="form.name2.$error.required">nombre requerido</span>
+		<!-- angular.element(document.getElementById("name2")).data() -->
+		<br/>
+		
+		<span>Aqui si que se activa</span>
+		
+		<br/>
+		<br/>
+		
+		<code>name2 = {{model.name2}}</code><br>
+  		<code>name2.$valid = {{form.name2.$valid}}</code><br>
+  		<code>name2.$error = {{form.name2.$error}}</code><br>
+  		<code>form.$valid = {{form.$valid}}</code><br>
+  		<code>form.$error.required = {{!!form.$error.required}}</code><br>				
+	</form>
+	
+	<br/>
+	<br/>
+	
+	<form name="form1" ng-submit="enviar()" ng-controller="myFormController">
+		<span>reto: </span>
+		<input type="text" name="reto" ng-model="model.reto" required ng-minlength="5" ng-maxlength="10"/>
+		
+		<br/>
+		
+		<span>Aqui si que se activa</span>
+		
+		<br/>
+		<br/>
+		
+		<div ng-messages="form1.reto.$error">
+			<div ng-message="required">Este campo es requerido</div>
+			<div ng-message="minlength">Este campo debe contener más de 5 carácteres</div>
+			<div ng-message="maxlength">Este campo no debe contener más de 10 carácteres</div>
+		</div>
+		
+		<button type="submit">Enviar</button>
+	</form>
+	
+	<div style="text-align: right;">
+		<a href="../../">Indice</a>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-messages.js"></script>
+	
+	<script src="../../assets/js/myApp_Forms.js"></script>
+	<script src="../../assets/js/myController.js"></script>
+</body>
+</html>

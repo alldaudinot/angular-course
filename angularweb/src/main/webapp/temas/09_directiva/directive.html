@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<title>angular-course</title>
+	<link rel="stylesheet" href="../../assets/css/style.css"></link>
+</head>
+<body ng-app="myApp">
+
+	<my-directive data-atributte="Hola Mundo!!!"></my-directive>
+	<my-directive data-atributte="Hola Mundo!!!"></my-directive>
+	<my-directive data-atributte="Hola Mundo!!!"></my-directive>
+
+	<my-directive data-culture="es"></my-directive>
+	<my-directive data-culture="en"></my-directive>
+	
+	<my-directive data-culture="es"></my-directive>
+	<my-directive data-culture="en"></my-directive>
+	
+	<my-directive data-culture="es"></my-directive>
+	<my-directive data-culture="en"></my-directive>
+	
+	<my-directive data-culture="es"></my-directive>
+	<my-directive data-culture="en"></my-directive>
+	
+	<div ng-controller="myController">
+		<my-directive-isolated data-one-binding="{{name}}" 
+								data-two-binding="name" 
+								data-function="click()">{{name}}
+		</my-directive-isolated>
+		<>
+		<my-directive-eval data-one-binding="{{name}}" 
+							data-two-binding="name" 
+							data-function="click()">{{name}}
+		</my-directive-eval>	
+	</div>
+	<div ng-app="app">
+		<dad></dad>
+	</div>
+	
+	<h1>Reto:</h1>
+	
+	<div>	
+		<my-select model="model1.id" collection="collection1" default="1"></my-select>
+		
+		<my-select model="model2.id" collection="collection2" default="1"></my-select>	 
+	</div>
+	
+	<div style="text-align: right;">
+		<a href="../../">Indice</a>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+	<script src="../../assets/js/myApp.js"></script>
+	<script src="../../assets/js/myDirective.js"></script>
+	<script src="../../assets/js/myDirectiveEval.js"></script>
+	<script src="../../assets/js/myDirectiveIsolated.js"></script>
+	<script src="../../assets/js/myController09.js"></script>
+	
+	<!-- reto -->
+	<script src="../../assets/js/myDirectiveReto.js"></script>
+	<script src="../../assets/js/myService09Reto.js"></script>
+	
+	
+</body>
+</html>

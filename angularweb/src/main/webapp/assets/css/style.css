@@ -1,0 +1,30 @@
+
+a:link {
+  font-weight: bold;
+  text-decoration: none; 
+  color: blue;
+}
+
+a:visited {
+  font-weight: bold;
+  text-decoration: line-through; 
+  color: blue;
+}
+
+a:hover, a:focus {
+  text-decoration: underline overline;
+}
+
+.invisible {
+	display: none;
+};
+
+.dad {
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+.son {
+    padding: 10px;
+    margin: 10px;
+    background-color: fuchsia;
+}

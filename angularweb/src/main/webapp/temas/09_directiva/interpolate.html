@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>angular-course</title>
+	<link rel="stylesheet" href="../../assets/css/style.css"></link>
+</head>
+<body ng-app='MainApp'>
+    <div ng-controller='MainCtrl'>
+    	<h1>Parse:</h1>
+      	<p>
+      		This service is used as a getter/setter for individual expression. It is basically 
+      		used by $interpolate to evaluate single variable against a scope.
+      	</p>
+        <div>example: {{parse}} - {{parse_assign}}</div>
+        
+        <h1>Interpolate:</h1>
+        <p>
+        	This service simply takes a string and is used to evaluate expressions. 
+        	We can run the entire string and this interpolate will give you the result.
+        </p>
+        <div>example: {{interpolate}}</div>
+        
+        <h1>Compile:</h1>
+        <p>
+        	This service takes the complete markup and converts a html string in a fully 
+        	functional DOM element. This DOM would work same as a DOM element as it would 
+        	have all linking and events. This uses $parse internally for evaluating expressions.
+        </p>
+        <div id="myButton">example 1 (from a Controller): {{compile}} (array) = </div>
+        
+        <br/>
+        
+        <div>example 2 (from the Directive: myDirective): <my-directive></my-directive></div>    
+        
+        <br/>
+        
+        <div>example 3 (from the Directive: mySelect): 
+        	<my-select-gender model="model.id" collection="collection" default="1"></my-select-gender>	
+      	</div>
+    </div>
+    
+    <div style="text-align: right;">
+		<a href="../../">Indice</a>
+	</div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    
+    <script src="../../assets/js/interpolate.js"></script>
+</body>
+</html>
